@@ -15,7 +15,9 @@ download_glue_data.py 提供glue_data下面其他的bert论文公测glue英文�
 
 data目录下是news数据的样例，按照样例构建自己的中文数据集，放在glue_data/NewsAll文件夹下
 
-首先下载中文配置文件chinese_L-12_H-768_A-12
+（由于大小限制，配置文件和数据集未上传）
+
+首先自己下载中文配置文件chinese_L-12_H-768_A-12
 
 包括bert_config.json/bert_model.ckpt/vocab.txt
 

@@ -1,6 +1,7 @@
-# bert-Chinese-classification-task
+# bert-Chinese-classification
 bert中文分类实践
 
+修改：
 在run_classifier_word.py中添加NewsProcessor，即新闻的预处理读入部分 \
 在main方法中添加news类型数据处理label \
  processors = { \
@@ -10,10 +11,17 @@ bert中文分类实践
         "news": NewsProcessor,\
     }
     
-download_glue_data.py 提供glue_data下面其他的bert论文公测glue数据下载
+download_glue_data.py 提供glue_data下面其他的bert论文公测glue英文数据下载
 
-data目录下是news数据的样例
+data目录下是news数据的样例，按照样例构建自己的中文数据集
 
+首先下载中文配置文件chinese_L-12_H-768_A-12
+
+包括bert_config.json/bert_model.ckpt/vocab.txt
+
+解压后运行convert.sh(改成自己的绝对路径) 生成.bin文件
+
+运行run.sh文件内容(改成自己的绝对路径)：
 export GLUE_DIR=/search/odin/bert/extract_code/glue_data \
 export BERT_BASE_DIR=/search/odin/bert/chinese_L-12_H-768_A-12/ \
 export BERT_PYTORCH_DIR=/search/odin/bert/chinese_L-12_H-768_A-12/
@@ -34,8 +42,6 @@ python run_classifier_word.py \
   --local_rank 3
   
   中文分类任务实践
-
-实验中对中文34个topic进行实践（包括：时政，娱乐，体育等），在对run_classifier.py代码中的预处理环节需要加入NewsProcessor模块，及类似于MrpcProcessor，但是需要对中文的编码进行适当修改，训练数据与测试数据按照4:1进行切割，数据量约80万，单卡GPU资源，训练时间18小时，acc为92.8%
 
 eval_accuracy = 0.9281581998809113
 

@@ -22,6 +22,7 @@ data目录下是news数据的样例，按照样例构建自己的中文数据集
 解压后运行convert.sh(改成自己的绝对路径) 生成.bin文件
 
 运行run.sh文件内容(改成自己的绝对路径)：
+
 export GLUE_DIR=/search/odin/bert/extract_code/glue_data \
 export BERT_BASE_DIR=/search/odin/bert/chinese_L-12_H-768_A-12/ \
 export BERT_PYTORCH_DIR=/search/odin/bert/chinese_L-12_H-768_A-12/

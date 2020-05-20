@@ -13,7 +13,7 @@ bert中文分类实践
     
 download_glue_data.py 提供glue_data下面其他的bert论文公测glue英文数据下载
 
-data目录下是news数据的样例，按照样例构建自己的中文数据集
+data目录下是news数据的样例，按照样例构建自己的中文数据集，放在glue_data文件夹下
 
 首先下载中文配置文件chinese_L-12_H-768_A-12
 
